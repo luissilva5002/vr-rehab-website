@@ -92,12 +92,15 @@ export default function App() {
             <span className="window-title">Ambiente de Simulação VR - Versão Demo</span>
           </div>
           <div className="iframe-wrapper">
-            <iframe 
-              src={`${process.env.PUBLIC_URL}/demo/index.html`} 
-              title="Demo VR Reabilitação"
-              className="vr-iframe"
-              allow="xr-spatial-tracking; fullscreen"
-            ></iframe>
+            <iframe
+              title="Simulador de Reabilitação VR"
+              src={`${process.env.PUBLIC_URL}/unity/index.html`}
+              style={{
+                width: "100%",
+                height: "600px",
+                border: "none"
+              }}
+            />
             <div className="iframe-fallback">
               <p>Demo em carregamento...</p>
               <span>(Insira o seu build WebGL/WebXR na pasta public/demo/)</span>
