@@ -101,10 +101,6 @@ export default function App() {
                 border: "none"
               }}
             />
-            <div className="iframe-fallback">
-              <p>Demo em carregamento...</p>
-              <span>(Insira o seu build WebGL/WebXR na pasta public/demo/)</span>
-            </div>
           </div>
         </div>
         <p className="demo-hint">Interaja com o rato ou toque para explorar o espaço terapêutico.</p>
