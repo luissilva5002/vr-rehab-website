@@ -7,44 +7,73 @@ export default function App() {
       
       {/* Navegação Minimalista */}
       <nav className="site-nav">
-        <div className="brand">Neuro<span>Rehab</span></div>
-        <a href="#simulador" className="btn-outline">Ir para a Demo</a>
+        <div className="brand">Binary<span>Beats</span></div>
       </nav>
 
-      {/* Hero Section Editorial (Assimétrica) */}
-      <header className="hero-editorial">
-        <div className="hero-text">
-          <span className="eyebrow">Projeto Braining 2026</span>
-          <h1>Reabilitação que respeita o tempo e a mente.</h1>
-          <p className="lead-paragraph">
-            Sabemos que o AVC vai além da motricidade. A fadiga, a frustração e o peso 
-            emocional tornam a recuperação exaustiva para o paciente e para quem cuida. 
-            E se a tecnologia de Realidade Virtual conseguisse "sentir" isso?
-          </p>
-          <div className="hero-actions">
-            <a href="#simulador" className="btn-solid">Experimentar Simulação</a>
-            <a href="#metodo" className="link-text">Entender a nossa abordagem &darr;</a>
-          </div>
+      {/* --- Secção 1: O Título de Impacto (Fundo Escuro/Contraste) --- */}
+      <section id="problema-titulo" className="hero-editorial-title dark-background">
+        <div className="container-focus">
+          <span className="eyebrow">O Problema</span>
+          <h1 className="clear-title">
+            O problema da reabilitação pós-AVC não é começar.<br/> 
+            <span className="highlight">É desistir em silêncio.</span>
+          </h1>
         </div>
+        
+        {/* Elemento visual mantido para decorar o cabeçalho */}
         <div className="hero-visual">
-          {/* Elemento visual suave em vez de uma foto de stock genérica */}
           <div className="abstract-shape">
             <div className="circle circle-1"></div>
             <div className="circle circle-2"></div>
           </div>
         </div>
-      </header>
+      </section>
+
+      {/* --- Secção 2: A Explicação Decompactada (Fundo Claro/Clean) --- */}
+      <section id="problema-detalhe" className="hero-editorial-details light-background">
+        <div className="decompacted-content">
+          <div className="text-grid">
+            <div className="text-block">
+              <h3>A Ilusão da Qualidade</h3>
+              <p>
+                A melhor reabilitação do mundo não vale nada se o doente não a repetir amanhã. 
+                A verdadeira questão não é a qualidade clínica, mas sim a consistência.
+              </p>
+            </div>
+            
+            <div className="text-block">
+              <h3>O Risco do Isolamento</h3>
+              <p>
+                A Braining já oferece inteligência na recuperação com AI + VR, mas a recuperação 
+                solitária conduz a <strong>drop-off</strong>, menor adesão e menor <em>stickiness</em> do produto.
+              </p>
+            </div>
+
+            <div className="text-block conclusion-block">
+              <h3>O Foco na Retenção</h3>
+              <p>
+                Resolver a desistência silenciosa é o próximo grande passo. A reabilitação precisa 
+                ser um hábito, não uma obrigação solitária.
+              </p>
+            </div>
+          </div>
+
+          <div className="hero-actions centered-actions">
+            <a href="#simulador" className="btn-solid">Experimentar Simulação</a>
+          </div>
+        </div>
+      </section>
 
       {/* Secção do Método (Layout Natural em Zig-Zag) */}
       <section id="metodo" className="method-section">
         <div className="content-container">
           
           <div className="text-block main-thesis">
-            <h2>Não basta um jogo imersivo. É preciso uma rede de segurança.</h2>
+            <h2>A Braining não precisa de mais conteúdo. Precisa de um modelo retentor.</h2>
             <p>
-              A maioria das soluções VR foca-se apenas na pontuação do exercício. Nós focamo-nos na <strong>sustentabilidade do uso</strong>. 
-              Integramos mecanismos éticos que avaliam o humor e o cansaço do paciente antes de cada sessão, ajustando 
-              dinamicamente o ambiente virtual.
+              Não estamos a mudar a forma como a reabilitação começa. Estamos a aumentar a probabilidade de ela continuar. 
+              A nossa solução é um <strong>modelo de recuperação interoperável de espaço duplo</strong>. Não é apenas 
+              multiplayer; oferecemos diferentes salas para diferentes formas de recuperação.
             </p>
           </div>
 
@@ -52,32 +81,41 @@ export default function App() {
             <div className="feature-item">
               <span className="feature-number">01</span>
               <div>
-                <h3>Check-in Emocional</h3>
-                <p>O simulador adapta o esforço cognitivo exigido com base no estado reportado. Mais cansaço resulta num ambiente mais calmo e tolerante a erros.</p>
+                <h3>O Ecossistema de Salas</h3>
+                <p>
+                  O paciente transita do seu espaço individual (<strong>Anchor Room</strong>) para zonas de baixo atrito, como a <strong>Warm-Up Room</strong> e a <strong>Quiet Co-Presence Room</strong> (tarefas comuns sem pressão social). Quando preparado, passa para a <strong>Cooperative Task Room</strong> e vê o seu progresso reconhecido na <strong>Celebration Room</strong>.
+                </p>
               </div>
             </div>
             
             <div className="feature-item">
               <span className="feature-number">02</span>
               <div>
-                <h3>O Fator Cuidador</h3>
-                <p>A sobrecarga de quem cuida é real. A nossa plataforma sinaliza padrões de desmotivação prolongada e facilita a ponte com o terapeuta.</p>
+                <h3>Interação Assimétrica vs. Assíncrona</h3>
+                <p>
+                  A interação <strong>assimétrica</strong> permite que pacientes com diferentes graus de recuperação executem exercícios 
+                  diferentes e ajustados no mesmo espaço. A interação <strong>assíncrona</strong> permite aos pacientes executar exercícios 
+                  colaborativos de forma diferida, respeitando o tempo e fadiga de cada um.
+                </p>
               </div>
             </div>
 
             <div className="feature-item">
               <span className="feature-number">03</span>
               <div>
-                <h3>Adesão a Longo Prazo</h3>
-                <p>Preservamos a dignidade e a autonomia. Sem frustrações desnecessárias, a rotina de recuperação torna-se um hábito positivo e não um castigo.</p>
+                <h3>Lógica Económica e Escala</h3>
+                <p>
+                  A Braining passa a vender uma experiência de recuperação partilhada (modelo biopsicossocial). Isto garante 
+                  uma assiduidade mais consistente (maior retenção = maior valor por utilizador) e adiciona uma camada de valor 
+                  com baixo custo marginal, pois não exige aumento proporcional de acompanhamento clínico.
+                </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Secção da Demo (Apresentação Limpa da Vossa Solução) */}
+      {/* Secção da Demo (Mantida inalterada conforme o pedido) */}
       <section id="simulador" className="demo-showcase">
         <div className="demo-header">
           <h2>O Nosso Protótipo</h2>
@@ -97,7 +135,7 @@ export default function App() {
               src={`${process.env.PUBLIC_URL}/unity/index.html`}
               style={{
                 width: "100%",
-                height: "600px",
+                height: "650px",
                 border: "none"
               }}
             />
@@ -108,7 +146,7 @@ export default function App() {
 
       {/* Footer Simples */}
       <footer className="site-footer">
-        <p>Criado para o Hackathon: Suporte pós-AVC — Humor, Fadiga e Cognição</p>
+        <p>Criado pela equipa Binary Beats - Hackathon Braining</p>
       </footer>
 
     </div>

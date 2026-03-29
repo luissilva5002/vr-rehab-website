@@ -1,6 +1,6 @@
 /* Variáveis para uma paleta natural e clínica */
 :root {
-  --blue-900: #0f172a; /* Texto principal */
+  --blue-900: #0f172a; /* Texto principal / Fundo Escuro */
   --blue-800: #1e3a8a; /* Títulos secundários */
   --blue-600: #2563eb; /* Botões / Destaques */
   --blue-100: #dbeafe; /* Fundos suaves */
@@ -36,17 +36,19 @@ body {
   top: 0;
   width: 100%;
   box-sizing: border-box;
+  z-index: 10;
 }
 
+/* Updated brand color to white to contrast with the new dark header */
 .brand {
   font-size: 22px;
   font-weight: 700;
-  color: var(--blue-900);
+  color: #ffffff; 
   letter-spacing: -0.5px;
 }
 
 .brand span {
-  color: var(--blue-600);
+  color: #93c5fd; /* Light blue accent for dark background */
   font-weight: 400;
 }
 
@@ -94,60 +96,56 @@ body {
   color: var(--blue-600);
 }
 
-/* HERO SECTION (EDITORIAL) */
-.hero-editorial {
-  min-height: 90vh;
+/* --- SECÇÃO 1: TÍTULO DE IMPACTO --- */
+.hero-editorial-title {
+  min-height: 70vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  padding: 0 6%;
+  padding: 120px 6% 60px;
   gap: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
+  position: relative;
 }
 
-.hero-text {
-  padding-top: 80px;
-  max-width: 600px;
+.dark-background {
+  background-color: var(--blue-900);
+  color: white;
 }
 
-.eyebrow {
+.container-focus {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.hero-editorial-title .eyebrow {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--blue-600);
+  letter-spacing: 2px;
+  color: #93c5fd; /* Lighter blue to pop on dark background */
   font-weight: 600;
   margin-bottom: 24px;
 }
 
-.hero-text h1 {
+.clear-title {
   font-size: 4vw;
-  line-height: 1.1;
-  margin: 0 0 24px 0;
+  line-height: 1.15;
+  margin: 0;
   font-weight: 800;
   letter-spacing: -1.5px;
-  color: var(--blue-900);
+  color: #ffffff;
 }
 
-.lead-paragraph {
-  font-size: 20px;
-  color: var(--text-muted);
-  margin-bottom: 40px;
-  line-height: 1.7;
+.clear-title .highlight {
+  color: #93c5fd; /* Highlighted text color */
 }
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-/* FORMAS ABSTRATAS (Em vez de imagens artificiais) */
+/* FORMAS ABSTRATAS (Mantidas) */
 .hero-visual {
   display: flex;
   justify-content: center;
   position: relative;
+  z-index: 1;
 }
 
 .abstract-shape {
@@ -160,13 +158,13 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.6;
+  opacity: 0.4; /* Slightly reduced opacity for dark background */
 }
 
 .circle-1 {
   width: 70%;
   height: 70%;
-  background-color: #93c5fd;
+  background-color: #3b82f6;
   top: 10%;
   left: 20%;
   animation: float 8s infinite ease-in-out;
@@ -175,7 +173,7 @@ body {
 .circle-2 {
   width: 50%;
   height: 50%;
-  background-color: #bfdbfe;
+  background-color: #60a5fa;
   bottom: 20%;
   right: 10%;
   animation: float 10s infinite ease-in-out reverse;
@@ -184,6 +182,48 @@ body {
 @keyframes float {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* --- SECÇÃO 2: EXPLICAÇÃO DECOMPACTADA --- */
+.hero-editorial-details {
+  padding: 80px 6%;
+}
+
+.light-background {
+  background-color: var(--blue-50);
+}
+
+.decompacted-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.text-block h3 {
+  font-size: 22px;
+  color: var(--blue-800);
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.text-block p {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hero-actions.centered-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 
 /* SECÇÃO DO MÉTODO */
@@ -245,7 +285,7 @@ body {
   font-size: 16px;
 }
 
-/* DEMO SHOWCASE */
+/* DEMO SHOWCASE (Intocado) */
 .demo-showcase {
   padding: 120px 6%;
   background-color: var(--blue-900);
@@ -348,17 +388,19 @@ body {
 
 /* RESPONSIVO */
 @media (max-width: 968px) {
-  .hero-editorial, .content-container {
+  .hero-editorial-title {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .hero-text {
-    padding-top: 100px;
+    text-align: center;
+    padding-top: 140px;
   }
 
-  .hero-text h1 {
-    font-size: 40px;
+  .clear-title {
+    font-size: 36px;
+  }
+
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
   
   .hero-visual {
@@ -367,8 +409,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .hero-actions {
+  .hero-actions.centered-actions {
     flex-direction: column;
-    align-items: flex-start;
   }
 }
