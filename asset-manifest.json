@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/vr-rehab-website/static/css/main.9bf78422.css",
-    "main.js": "/vr-rehab-website/static/js/main.e5265cb2.js",
+    "main.css": "/vr-rehab-website/static/css/main.f80c38b4.css",
+    "main.js": "/vr-rehab-website/static/js/main.374f88e6.js",
     "index.html": "/vr-rehab-website/index.html",
-    "main.9bf78422.css.map": "/vr-rehab-website/static/css/main.9bf78422.css.map",
-    "main.e5265cb2.js.map": "/vr-rehab-website/static/js/main.e5265cb2.js.map"
+    "main.f80c38b4.css.map": "/vr-rehab-website/static/css/main.f80c38b4.css.map",
+    "main.374f88e6.js.map": "/vr-rehab-website/static/js/main.374f88e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bf78422.css",
-    "static/js/main.e5265cb2.js"
+    "static/css/main.f80c38b4.css",
+    "static/js/main.374f88e6.js"
   ]
 }
